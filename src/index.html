@@ -4,10 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
-    <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/filter.css">
+    <link rel="stylesheet" href="./styles/todo-list.css">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+    <div class="todoapp">
+      <header class="header">
+        <h1>todos</h1>
+
+        <form>
+          <input
+            type="text"
+            class="new-todo"
+            placeholder="What needs to be done?"
+          >
+        </form>
+      </header>
+
+      <section class="main">
+        <input
+          type="checkbox"
+          id="toggle-all"
+          class="toggle-all"
+        >
+        <label for="toggle-all">Mark all as complete</label>
+
+        <ul class="todo-list">
+          <li>
+            <div class="view">
+              <input 
+                type="checkbox"
+                class="toggle"
+                id="toggle-view"
+              >
+              <label for="toggle-view">asdfghj</label>
+              <button type="button" class="destroy"></button>
+            </div>
+            <input type="text" class="edit">
+          </li>
+
+          <li class="completed">
+            <div class="view">
+              <input
+                type="checkbox"
+                class="toggle"
+                id="toggle-completed"
+              >
+              <label for="toggle-completed">qwertyuio</label>
+              <button type="button" class="destroy"></button>
+            </div>
+            <input type="text" class="edit">
+          </li>
+
+          <li class="editing">
+            <div class="view">
+              <input
+                type="checkbox"
+                class="toggle"
+                id="toggle-editing"
+              >
+              <label for="toggle-editing">zxcvbnm</label>
+              <button type="button" class="destroy"></button>
+            </div>
+            <input type="text" class="edit">
+          </li>
+
+          <li>
+            <div class="view">
+              <input
+                type="checkbox"
+                class="toggle"
+                id="toggle-view2"
+              >
+              <label for="toggle-view2">1234567890</label>
+              <button type="button" class="destroy"></button>
+            </div>
+            <input type="text" class="edit">
+          </li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <span class="todo-count">
+          3 items left
+        </span>
+
+        <ul class="filters">
+          <li>
+            <a href="#/" class="selected">All</a>
+          </li>
+
+          <li>
+            <a href="#/active">Active</a>
+          </li>
+
+          <li>
+            <a href="#/completed">Completed</a>
+          </li>
+        </ul>
+
+        <button type="button" class="clear-completed">
+          Clear completed
+        </button>
+      </footer>
+    </div>
+
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
