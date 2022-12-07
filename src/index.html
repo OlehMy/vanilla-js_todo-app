@@ -19,44 +19,17 @@
       </header>
 
       <section class="main">
-        <input
-          type="checkbox"
-          id="toggle-all"
-          class="toggle-all"
-        >
-        <label for="toggle-all">Mark all as complete</label>
+        <span class="toggle-all-container">
+          <input
+            type="checkbox"
+            id="toggle-all"
+            class="toggle-all"
+          >
+          <label for="toggle-all">Mark all as complete</label>
+        </span>
 
         <ul class="todo-list">
-          <li class="todo-item">
-            <input 
-              type="checkbox"
-              class="toggle"
-              id="toggle-1"
-            >
-            <label for="toggle-1">HTML</label>
-            <button type="button" class="destroy"></button>
-          </li>
-
-          <li class="todo-item">
-            <input
-              type="checkbox"
-              class="toggle"
-              id="toggle-2"
-              checked
-            >
-            <label for="toggle-2">CSS</label>
-            <button type="button" class="destroy"></button>
-          </li>
-
-          <li class="todo-item">
-            <input
-              type="checkbox"
-              class="toggle"
-              id="toggle-3"
-            >
-            <label for="toggle-3">JS</label>
-            <button type="button" class="destroy"></button>
-          </li>
+          <!-- todos add here -->
         </ul>
       </section>
 
@@ -67,15 +40,21 @@
 
         <ul class="filters">
           <li>
-            <a href="#/" class="selected">All</a>
+            <a
+              href="#/"
+              class="selected"
+              data-filter="all"
+            >
+              All
+            </a>
           </li>
 
           <li>
-            <a href="#/active">Active</a>
+            <a href="#/active" data-filter="active">Active</a>
           </li>
 
           <li>
-            <a href="#/completed">Completed</a>
+            <a href="#/completed" data-filter="completed">Completed</a>
           </li>
         </ul>
 
